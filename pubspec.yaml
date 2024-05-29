@@ -64,8 +64,8 @@ dependencies:
   cupertino_icons: ^1.0.0
 
   #custom
-  flutter_tesseract_ocr: ^0.4.24
   camera: ^0.10.5+9
+  google_ml_kit: ^0.18.0
 
 dependency_overrides:
   http: 1.2.0

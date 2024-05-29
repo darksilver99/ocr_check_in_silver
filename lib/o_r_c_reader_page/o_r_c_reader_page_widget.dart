@@ -1,4 +1,3 @@
-import 'package:flutter_tesseract_ocr/flutter_tesseract_ocr.dart';
 
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
