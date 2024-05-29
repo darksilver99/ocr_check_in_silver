@@ -6,6 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:o_c_r_check_in/flutter_flow/flutter_flow_theme.dart';
+import 'package:o_c_r_check_in/flutter_flow/uploaded_file.dart';
 
 class CustomCameraPage extends StatefulWidget {
   const CustomCameraPage({super.key});
@@ -88,7 +89,16 @@ class _CustomCameraPageState extends State<CustomCameraPage> {
           Uint8List bytes = await file.readAsBytes();
           List<int> byteList = bytes.toList();
           var photoBase64 = base64Encode(byteList);
-          Navigator.pop(context, photoBase64);
+
+          FFUploadedFile selectedUploadedFiles = FFUploadedFile(
+            name: file.name,
+            bytes: bytes,
+            height: 1,
+            width: 1,
+            blurHash: "",
+          );
+
+          Navigator.pop(context, [file.path, selectedUploadedFiles]);
         }
       }
     });

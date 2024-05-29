@@ -1,3 +1,5 @@
+import 'package:flutter_tesseract_ocr/flutter_tesseract_ocr.dart';
+
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -36,9 +38,7 @@ class _ORCReaderPageWidgetState extends State<ORCReaderPageWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => _model.unfocusNode.canRequestFocus
-          ? FocusScope.of(context).requestFocus(_model.unfocusNode)
-          : FocusScope.of(context).unfocus(),
+      onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
@@ -90,19 +90,16 @@ class _ORCReaderPageWidgetState extends State<ORCReaderPageWidget> {
                     children: [
                       Builder(
                         builder: (context) {
-                          if (_model.imagePath != null &&
-                              (_model.imagePath?.bytes?.isNotEmpty ?? false)) {
+                          if (_model.imagePath != null && (_model.imagePath?.bytes?.isNotEmpty ?? false)) {
                             return Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 16.0),
+                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(0.0),
                                     child: Image.memory(
-                                      _model.imagePath?.bytes ??
-                                          Uint8List.fromList([]),
+                                      _model.imagePath?.bytes ?? Uint8List.fromList([]),
                                       width: 300.0,
                                       height: 200.0,
                                       fit: BoxFit.cover,
@@ -111,23 +108,19 @@ class _ORCReaderPageWidgetState extends State<ORCReaderPageWidget> {
                                 ),
                                 FFButtonWidget(
                                   onPressed: () async {
-                                    context.pushNamed('CameraPage');
+                                    List<dynamic> tmpImage = await context.pushNamed('CameraPage') ?? [];
 
                                     setState(() {
-                                      _model.imagePath = null;
+                                      _model.imagePath = tmpImage[1];
                                     });
                                   },
                                   text: 'ถ่ายอีกครั้ง',
                                   options: FFButtonOptions(
                                     height: 40.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
+                                    padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context).primary,
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .titleSmall
-                                        .override(
+                                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
                                           letterSpacing: 0.0,
@@ -145,23 +138,19 @@ class _ORCReaderPageWidgetState extends State<ORCReaderPageWidget> {
                           } else {
                             return FFButtonWidget(
                               onPressed: () async {
-                                context.pushNamed('CameraPage');
+                                List<dynamic> tmpImage = await context.pushNamed('CameraPage') ?? [];
 
                                 setState(() {
-                                  _model.imagePath = null;
+                                  _model.imagePath = tmpImage[1];
                                 });
                               },
                               text: 'ถ่ายบัตร',
                               options: FFButtonOptions(
                                 height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    24.0, 0.0, 24.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
+                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).primary,
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .titleSmall
-                                    .override(
+                                textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                       fontFamily: 'Readex Pro',
                                       color: Colors.white,
                                       letterSpacing: 0.0,

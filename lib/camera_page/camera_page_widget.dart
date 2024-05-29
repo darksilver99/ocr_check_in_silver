@@ -1,3 +1,5 @@
+import 'package:o_c_r_check_in/custom_widget/CustomCameraPage.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -49,6 +51,7 @@ class _CameraPageWidgetState extends State<CameraPageWidget> {
               Expanded(
                 child: Stack(
                   children: [
+                    CustomCameraPage(),
                     Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 0.0, 0.0),
