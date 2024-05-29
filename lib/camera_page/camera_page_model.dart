@@ -1,19 +1,12 @@
-import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'o_r_c_reader_page_widget.dart' show ORCReaderPageWidget;
+import 'camera_page_widget.dart' show CameraPageWidget;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class ORCReaderPageModel extends FlutterFlowModel<ORCReaderPageWidget> {
-  ///  Local state fields for this page.
-
-  String ocrText = '-';
-
-  FFUploadedFile? imagePath;
-
+class CameraPageModel extends FlutterFlowModel<CameraPageWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

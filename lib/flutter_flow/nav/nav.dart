@@ -66,6 +66,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'ORCReaderPage',
           path: '/oRCReaderPage',
           builder: (context, params) => ORCReaderPageWidget(),
+        ),
+        FFRoute(
+          name: 'CameraPage',
+          path: '/cameraPage',
+          builder: (context, params) => CameraPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
