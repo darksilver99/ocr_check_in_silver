@@ -36,12 +36,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => NavBarPage(),
+      errorBuilder: (context, state) => LoginPageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => NavBarPage(),
+          builder: (context, _) => LoginPageWidget(),
         ),
         FFRoute(
           name: 'HomePage',
