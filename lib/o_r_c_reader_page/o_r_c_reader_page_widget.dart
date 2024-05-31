@@ -24,6 +24,8 @@ class _ORCReaderPageWidgetState extends State<ORCReaderPageWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ORCReaderPageModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -113,9 +115,8 @@ class _ORCReaderPageWidgetState extends State<ORCReaderPageWidget> {
                                   onPressed: () async {
                                     context.pushNamed('CameraPage');
 
-                                    setState(() {
-                                      _model.imagePath = null;
-                                    });
+                                    _model.imagePath = null;
+                                    setState(() {});
                                   },
                                   text: 'ถ่ายอีกครั้ง',
                                   options: FFButtonOptions(
@@ -147,9 +148,8 @@ class _ORCReaderPageWidgetState extends State<ORCReaderPageWidget> {
                               onPressed: () async {
                                 context.pushNamed('CameraPage');
 
-                                setState(() {
-                                  _model.imagePath = null;
-                                });
+                                _model.imagePath = null;
+                                setState(() {});
                               },
                               text: 'ถ่ายบัตร',
                               options: FFButtonOptions(
