@@ -91,19 +91,21 @@ class _ORCReaderPageWidgetState extends State<ORCReaderPageWidget> {
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(0.0),
-                          child: Image.memory(
-                            _model.imagePath?.bytes ?? Uint8List.fromList([]),
-                            width: 300.0,
-                            height: 200.0,
-                            fit: BoxFit.cover,
+                      if (_model.imagePath != null &&
+                          (_model.imagePath?.bytes?.isNotEmpty ?? false))
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 16.0),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(0.0),
+                            child: Image.memory(
+                              _model.imagePath?.bytes ?? Uint8List.fromList([]),
+                              width: 300.0,
+                              height: 200.0,
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
-                      ),
                       FFButtonWidget(
                         onPressed: () async {
                           final selectedMedia = await selectMedia(
