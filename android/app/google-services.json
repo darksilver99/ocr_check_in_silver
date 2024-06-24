@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "426601418126",
+    "project_id": "o-c-r-check-in-m5w9po",
+    "storage_bucket": "o-c-r-check-in-m5w9po.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:426601418126:android:b4317750675ab3d90368df",
+        "android_client_info": {
+          "package_name": "com.silver.ocrcheckin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWtcfHArcZuy_WawSp9r7tCuOpOKrzSp4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

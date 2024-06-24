@@ -39,9 +39,9 @@ class FFAppState extends ChangeNotifier {
 
   dynamic _userData;
   dynamic get userData => _userData;
-  set userData(dynamic _value) {
-    _userData = _value;
-    prefs.setString('ff_userData', jsonEncode(_value));
+  set userData(dynamic value) {
+    _userData = value;
+    prefs.setString('ff_userData', jsonEncode(value));
   }
 }
 
