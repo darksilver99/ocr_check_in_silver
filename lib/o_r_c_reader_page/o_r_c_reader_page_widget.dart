@@ -25,8 +25,6 @@ class _ORCReaderPageWidgetState extends State<ORCReaderPageWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ORCReaderPageModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

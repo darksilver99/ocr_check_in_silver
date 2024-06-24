@@ -2,18 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CLIENT_ID</key>
+	<string>622357353461-c4plp76kru6e7dbddks7h5f1j9niskcc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.622357353461-c4plp76kru6e7dbddks7h5f1j9niskcc</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>622357353461-4v45o9p80q2phcsm8iteofj0puadjd9h.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyC0UeHTZfSF509Vnf9UvSxBNm4YPWoaK4w</string>
+	<string>AIzaSyDWXh2tc_-2QR-8vguRLbqPV93zLYjuTBE</string>
 	<key>GCM_SENDER_ID</key>
-	<string>426601418126</string>
+	<string>622357353461</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.silver.ocrcheckin</string>
 	<key>PROJECT_ID</key>
-	<string>o-c-r-check-in-m5w9po</string>
+	<string>silver-65166</string>
 	<key>STORAGE_BUCKET</key>
-	<string>o-c-r-check-in-m5w9po.appspot.com</string>
+	<string>silver-65166.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:426601418126:ios:16f86c3df7fe85f90368df</string>
+	<string>1:622357353461:ios:8a93b4bd165b4c98b4c6bc</string>
 </dict>
 </plist>

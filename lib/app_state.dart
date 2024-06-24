@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'backend/api_requests/api_manager.dart';
+import '/backend/backend.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'flutter_flow/flutter_flow_util.dart';
-import 'dart:convert';
 
 class FFAppState extends ChangeNotifier {
   static FFAppState _instance = FFAppState._internal();
@@ -20,13 +19,7 @@ class FFAppState extends ChangeNotifier {
   Future initializePersistedState() async {
     prefs = await SharedPreferences.getInstance();
     _safeInit(() {
-      if (prefs.containsKey('ff_userData')) {
-        try {
-          _userData = jsonDecode(prefs.getString('ff_userData') ?? '');
-        } catch (e) {
-          print("Can't decode persisted json. Error: $e.");
-        }
-      }
+      _customerID = prefs.getString('ff_customerID') ?? _customerID;
     });
   }
 
@@ -37,11 +30,11 @@ class FFAppState extends ChangeNotifier {
 
   late SharedPreferences prefs;
 
-  dynamic _userData;
-  dynamic get userData => _userData;
-  set userData(dynamic value) {
-    _userData = value;
-    prefs.setString('ff_userData', jsonEncode(value));
+  String _customerID = '';
+  String get customerID => _customerID;
+  set customerID(String value) {
+    _customerID = value;
+    prefs.setString('ff_customerID', value);
   }
 }
 
